@@ -1,0 +1,602 @@
+/* font link in imported */
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* applied to all */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+/* adding global styling for button and to mix it with other button
+so we have add another class called normal   */
+button.normal{
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #000;
+  background-color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  border:none;
+  outline: none;
+  transition: 0.2s;
+}
+
+button.white{
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #fff;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid white;
+  outline: none;
+  transition: 0.2s;
+}
+body {
+  width: 100%;
+}
+
+                                     /* header section */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: #e3e6f5;
+    /* overflow: hidden; */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.21);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+header .nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header .nav ul li{
+    display: flex;
+    list-style: none;
+    padding: 0px 20px;
+    position: relative;
+}
+header .nav ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    /* font-weight: 600; */
+    color: #1a1a1a;
+    transition: 0.3s ease; /*a the transition was happening too fast*/
+}
+
+header .nav li a:hover,
+header .nav li a.active{
+    color:red;
+    cursor: pointer;
+}
+
+/* for the underline effect */
+/* we have to use sudo class that is after and before...every time we use after we use content */
+header .nav li a.active::after,
+/* to achieve the underline effect  */
+header .nav li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  /* background-color: #088187; */
+  background-color: rgba(255, 63, 63, 0.689);
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+#mobile{
+  display: none;
+  align-items: center;
+}
+
+                                       /* hero section */
+#hero{
+  background-image: url("./img/hero4.png");
+  /* to center the image */
+  height: 90vh;
+  width: 100%;
+  background-position: top 25% right 0;
+  background-size: cover;
+  /* to center the content */
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#hero h4{
+  padding-bottom: 15px;
+}
+
+#hero h1{
+  color: #088187;
+}
+
+#hero button{
+  background-image: url(./img/button.png);
+  border: 0;
+  background-color: transparent;
+  color: #088187;
+  padding: 14px 80px 14px 65px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+  background-repeat: no-repeat;
+}
+
+                                  /*Feature section  */
+.feature{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.feature .fe-box{
+  border: 1px solid #cce7d0;
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px;
+  box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.21);
+  border-radius: 4px;
+  margin: 15px 0px;
+}
+
+.feature .fe-box:hover{
+  cursor: pointer;
+  box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+.feature .fe-box img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.feature .fe-box h6{
+  /* inline block as because it was taking too much space around the borders */
+  display: inline-block;
+  padding: 9px 8px 6px 8px;
+  border-radius: 4px;
+  color: #088187;
+  background-color: #fddde4;
+  line-height: 1;
+}
+/* for changing the color of the div of same type nth child feature is */
+.feature .fe-box:nth-child(2) h6{
+  background-color: #bcebbec9;
+}
+.feature .fe-box:nth-child(3) h6{
+  background-color: #bceaeb;
+}
+.feature .fe-box:nth-child(4) h6{
+  background-color: #bcbeeb;
+}
+.feature .fe-box:nth-child(5) h6{
+  background-color: #ebe4bc;
+}
+.feature .fe-box:nth-child(6) h6{
+  background-color: #bccceb83;
+}
+
+
+                                      /* feature product section */ 
+#product1{
+  text-align: center;
+}
+#product1 .product-container{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;  
+  flex-wrap: wrap;
+}
+
+#product1 .product{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cce7d0;
+  /* border: 2px solid black; */
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+  margin: 15px 0px;
+  transition: 0.2s ease;
+  position: relative;
+}
+#product1 .product:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+#product1 .product img{
+  width: 100%;
+  border-radius: 20px;
+}
+/* product description */
+#product1 .product .description{
+  text-align: start;
+  padding: 10px 0px;
+}
+
+/* product brand name */
+#product1 .product span{
+  font-size: 12px;
+  color: #606063;
+}
+/* product name */
+#product1 .product h5{
+  color: #1a1a1a;
+  padding: 7px 0px;
+  font-size: 14px;
+}
+
+/* stars */
+#product1 .product .star{
+  color: rgb(243, 181, 25);
+  font-size: 14px;
+}
+
+/* price tag */
+#product1 .product h4{
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #088187;
+}
+
+
+#product1 .product .cart{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500px;
+  color: #088187;
+  border:1 px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+                                   /* Banner section */
+#banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("img/banner/b2.jpg");
+  width: 100%;
+  height: 40vh;
+  background-position: center;
+  background-size: cover;
+}                              
+
+#banner h4{
+  color: #fff;
+  font-size: 16px;
+}
+
+#banner h2{
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 0px;  
+}
+
+#banner h2 span{
+  color: #ef3636;
+}
+
+#banner button:hover{
+  background-color: #088187;
+  color: #fff ;
+}
+
+
+                          /* So-Call banner */
+#sm-banner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}                          
+#sm-banner .banner-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("img/banner/b17.jpg");
+  min-width: 580px;
+  height: 50vh;
+  background-position: center;
+  background-size: cover; 
+  padding: 30px; 
+}         
+
+#sm-banner h4{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#sm-banner h2{
+  color: #fff;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+#sm-banner span{
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+/* hover effect on the banner  */
+#sm-banner .banner-box:hover button{
+  background-color: #088187;
+  border-color: #088187;
+}
+
+#sm-banner .banner-box2{
+  background-image: url(img/banner/b10.jpg);
+}
+
+/* Text Banner */
+#banner3{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0px 80px;
+}
+
+#banner3 .banner-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("img/banner/b7.jpg");
+  min-width: 30%;
+  height: 30vh;
+  background-position: center;
+  background-size: cover; 
+  padding: 20px; 
+  margin-bottom: 20px;
+}     
+
+#banner3 .banner-box2{
+  background-image: url(img/banner/b4.jpg);
+}
+
+#banner3 .banner-box3{
+  background-image: url(img/banner/b18.jpg);
+}
+
+#banner3 h2{
+  color: #fff;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+#banner3 h3{
+  color: #ef3636;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+/* Newsletter section */
+#newsletter{
+  /* height: 80px;
+  border: 1px solid black;
+  width: 100%;
+  position: relative; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("img/banner/b14.png");
+  background-position: 20% 30%;
+  background-repeat: no-repeat;
+  border: 1px solid black;
+  background-color: #041e48;
+}
+
+.newstext h4{
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+}
+.newstext p{
+  color: #818ae0;
+  font-size: 15px;
+  font-weight: 600;
+}
+.newstext p span{
+  color: #ffbd27;
+}
+
+#newsletter .form{
+  display: flex;
+  width: 40%;
+}
+#newsletter input{
+  height: 3.215rem;
+  padding: 0 1.25em;
+  font-size: 14px;
+  width: 100%;
+  border: solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#newsletter button{
+  background-color: #088187;
+  color: #fff;
+  white-space: nowrap;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+/* footer section  */
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+footer .logo{
+  margin-bottom: 30px;
+}
+
+footer h4{
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  color:#222;
+  margin-bottom: 10px;
+}
+footer{
+  margin: 20px;
+}
+
+footer .follow{
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+footer .install .row img{
+  border: 1px solid #088187;
+  border-radius: 6px;
+}
+footer .install img{
+  margin: 10px 0 15px 0;
+}
+
+footer .follow i:hover,
+footer a:hover{
+  color: #088187;
+}
+
+footer .copyright{
+  width:100%;
+  text-align: center;
+}
+
+
+
+/* starting media query for the responsive web development */
+@media (max-width:799px) {
+  header .nav ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right:-300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+    padding: 80px 0 0 10px;
+}
+
+header .nav.active{
+  right:0px;
+}
+
+header .nav li{
+  margin-bottom: 25px;
+}
+#mobile{
+  display: flex;
+  align-items: center;
+}
+#mobile i{
+  color: #1a1a1a;
+  font-size: 24px;
+  padding-left: 20px;
+}
+}
+/* Work on progress section */
+.opening-soon{
+  color: royalblue;
+  font-weight: 700;
+  border: 1px solid black;
+  height: 90vh;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+}
+
+
+
