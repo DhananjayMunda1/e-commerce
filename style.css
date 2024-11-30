@@ -140,6 +140,10 @@ header .nav li a:hover::after{
   align-items: center;
 }
 
+#close{
+  display: none;
+}
+
                                        /* hero section */
 #hero{
   background-image: url("./img/hero4.png");
@@ -555,6 +559,9 @@ footer .copyright{
 
 /* starting media query for the responsive web development */
 @media (max-width:799px) {
+  .section-p1 {
+    padding: 40px 40px;
+}
   header .nav ul{
     display: flex;
     flex-direction: column;
@@ -570,7 +577,7 @@ footer .copyright{
     padding: 80px 0 0 10px;
 }
 
-header .nav.active{
+header .nav.active ul{
   right:0px;
 }
 
@@ -586,6 +593,96 @@ header .nav li{
   font-size: 24px;
   padding-left: 20px;
 }
+
+#close{
+  display: initial;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: #222;
+  font-size: 24px;
+}
+
+/* for the hero section */
+#hero {
+ 
+  height: 70vh;
+  padding: 0 80px;
+  background-position: top 30% right 30%;
+}
+
+.feature {
+  justify-content: center;
+}
+.feature .fe-box {
+  margin: 15px 15px;
+}
+
+#product1 .product-container {
+  justify-content: center;
+}
+#product1 .product {
+  margin: 15px;
+}
+
+#sm-banner {
+  justify-content: center;
+}
+#sm-banner .banner-box {
+     margin-bottom: 10px;
+     width: 100%;
+}
+
+#banner {
+  height: 20vh;
+}
+
+#banner3 {
+  padding: 0px 40px;
+}
+
+#banner3 .banner-box {
+  width: 28%;
+}
+
+#newsletter .form {
+  width: 70%;
+}
+}
+@media(max-width:477px){
+  .section-p1 {
+    padding: 20px;
+}
+  header {
+    padding: 10px 30px;
+}
+h2 {
+  font-size: 32px;
+}
+h1 {
+  font-size: 38px;
+}
+#hero {
+  padding: 0 20px;
+  background-position: 55%;
+}
+.feature .fe-box {
+  width: 155px;
+  margin:0 0 15px 0;
+}
+
+.feature {
+  justify-content: space-between;
+}
+#product1 .product {
+  width: 100%;
+}
+#banner {
+  height: 40vh;
+}
+#sm-banner .banner-box {
+   height: 40vh;
+} 
 }
 /* Work on progress section */
 .opening-soon{
